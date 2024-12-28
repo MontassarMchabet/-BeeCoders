@@ -1,0 +1,104 @@
+/* CourseList.css */
+
+/* Style général de la page */
+.course-list-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.course-list-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Utilisation de CSS Grid pour les cartes de cours */
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+    gap: 20px;  /* Espacement entre les cartes */
+    justify-items: center; /* Centrer les éléments horizontalement */
+    margin-top: 20px;
+}
+
+/* Style de chaque carte de cours */
+.course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    width: 300px;  /* Limite de la largeur */
+    text-align: left;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Effet au survol sur la carte */
+.course-card:hover {
+    transform: translateY(-10px); /* Légère élévation au survol */
+}
+
+/* Image du cours */
+.course-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;  /* S'assure que l'image couvre bien l'espace */
+    border-radius: 5px;
+}
+
+/* Titre du cours */
+.course-info h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Prix du cours */
+.course-price {
+    color: #C4366D;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Bouton d'inscription */
+.enroll-btn {
+    background-color: #C4366D;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.enroll-btn:hover {
+    background-color: #C4366D;  /* Couleur plus foncée au survol */
+}
+
+/* Gestion de l'affichage mobile */
+@media (max-width: 1024px) {
+    .course-list {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour les tablettes */
+    }
+}
+
+@media (max-width: 768px) {
+    .course-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour les mobiles */
+    }
+}
+
+@media (max-width: 480px) {
+    .course-list {
+        grid-template-columns: 1fr; /* 1 colonne pour les petits écrans */
+    }
+}

@@ -1,0 +1,266 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  .header {
+    padding: 15px 0;
+    background: white;
+    border-top: 1px solid #000;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 500px;
+    /* background-image: url('/placeholder.svg?height=500&width=1200'); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-text-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+  }
+  
+  .hero-text-box h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+  
+  .hero-text-box p {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+  
+  .register-btn {
+    background-color: #C4366D;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .register-btn:hover {
+    background-color: #a62e5a;
+  }
+  
+  /* Courses Section */
+  .courses-section {
+    padding: 60px 0;
+  }
+  
+  .courses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .courses-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .view-more-btn {
+    padding: 8px 20px;
+    border: 1px solid #C4366D;
+    background: transparent;
+    color: #C4366D;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  
+  .view-more-btn:hover {
+    background: #C4366D;
+    color: white;
+  }
+  
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .course-card {
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    background: white;
+    transition: transform 0.3s;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .course-image {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .course-info {
+    padding: 20px;
+  }
+  
+  .course-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    color: #C4366D;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    background-color: #FFB963;
+    padding: 60px 0;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 100px;
+    border-radius: 80px;
+  }
+  
+  .contact-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .contact-form-container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #FFB963;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgb(243, 234, 234);
+  }
+  
+  .contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .submit-btn {
+    background-color: #C4366D;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .submit-btn:hover {
+    background-color: #a62e5a;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .courses-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-text-box h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-text-box p {
+      font-size: 1.2rem;
+    }
+    
+    .courses-header {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+    
+    .courses-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-form-container {
+      padding: 0 20px;
+    }
+  }
+  
+  

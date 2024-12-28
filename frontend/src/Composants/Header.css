@@ -1,0 +1,55 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+.highlight {
+    color: #ff5722;
+}
+
+
+.banner {
+    position: relative;
+    background-image: url('./banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.banner-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.register-btn {
+    background-color: #C4366D;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .register-btn:hover {
+    background-color: #a62e5a;
+  }
