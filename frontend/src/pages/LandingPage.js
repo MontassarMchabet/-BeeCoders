@@ -26,7 +26,7 @@ const LandingPage = () => {
     return (
         <>
             <Header />
-            {/* Courses Section */}
+           
             <section className="courses-section">
                 <div className="container">
                     <div className="courses-header">
@@ -38,7 +38,7 @@ const LandingPage = () => {
                     </div>
 
                     <div className="courses-grid">
-                        {courses.slice(0, 6).map((course, index) => (  // Limitation à 6 cours
+                        {courses.slice(0, 6).map((course, index) => ( 
                             <div className="course-card" key={index}>
                                 <div className="course-image">
                                     <img src={`http://localhost:5000${course.image}`} alt={course.title} />
@@ -53,7 +53,7 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            {/* Contact Section */}
+       
             <section className="contact-section">
                 <div className="container">
                     <div className="contact-form-container">

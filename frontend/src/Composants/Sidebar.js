@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaHome, FaBook } from 'react-icons/fa';
-import { Link } from 'react-router-dom'; // Importation de Link
+import { Link } from 'react-router-dom'; 
 import '../pages/AdminPanel.css';
 
 const Sidebar = () => {
@@ -14,7 +14,7 @@ const Sidebar = () => {
                     <FaHome className="sidebar-icon" />
                     <span>Dashboard</span>
                 </li>
-                {/* Utilisation de Link pour la navigation */}
+            
                 <li>
                     <Link to="/admin" style={{ color:'#e9ecef'}} >
                         <FaBook className="sidebar-icon" />

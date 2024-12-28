@@ -73,7 +73,7 @@ const CreateCourse = () => {
         <Box
             sx={{
                 minHeight: '100vh',
-                ml: { sm: 30 }, // Assurez-vous que Sidebar ne chevauche pas le contenu
+                ml: { sm: 30 }, 
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -91,7 +91,7 @@ const CreateCourse = () => {
 
                 <form onSubmit={handleSubmit}>
                     <Stack spacing={4}>
-                        {/* Title Field */}
+                   
                         <Box>
                             <Typography variant="subtitle1" gutterBottom>
                                 Course Title
@@ -106,7 +106,6 @@ const CreateCourse = () => {
                             />
                         </Box>
 
-                        {/* Price Field */}
                         <Box>
                             <Typography variant="subtitle1" gutterBottom>
                                 Price (DT)
@@ -122,7 +121,6 @@ const CreateCourse = () => {
                             />
                         </Box>
 
-                        {/* Image Upload and Preview */}
                         <Box>
                             <Typography variant="subtitle1" gutterBottom>
                                 Course Image
@@ -161,7 +159,7 @@ const CreateCourse = () => {
                             </Grid>
                         </Box>
 
-                        {/* Submit Button */}
+                      
                         <Button
                             type="submit"
                             variant="contained"
@@ -172,7 +170,7 @@ const CreateCourse = () => {
                             {loading ? <CircularProgress size={24} color="inherit" /> : 'Create Course'}
                         </Button>
 
-                        {/* Cancel Button */}
+                     
                         <Button
                             variant="outlined"
                             color="secondary"

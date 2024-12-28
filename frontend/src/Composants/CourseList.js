@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Header from './Header';
-import './CourseList.css';  // Importez un fichier CSS pour styliser l'interface
+import './CourseList.css';  
 
 const CourseList = () => {
     const [courses, setCourses] = useState([]);
@@ -9,12 +9,12 @@ const CourseList = () => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        // Fonction pour récupérer les cours depuis l'API
+  
         const fetchCourses = async () => {
             try {
                 const res = await axios.get('http://localhost:5000/Course/getCourses');
-                setCourses(res.data);  // Stocke les cours dans l'état
-                setLoading(false);      // Fin du chargement
+                setCourses(res.data); 
+                setLoading(false);      
             } catch (error) {
                 setError('Failed to load courses');
                 setLoading(false);
@@ -22,14 +22,14 @@ const CourseList = () => {
         };
 
         fetchCourses();
-    }, []);  // L'effet est exécuté une seule fois au montage du composant
+    }, []);  
 
     if (loading) {
-        return <div>Loading...</div>; // Affiche "Loading..." tant que les données sont en train d'être récupérées
+        return <div>Loading...</div>; 
     }
 
     if (error) {
-        return <div>{error}</div>; // Affiche un message d'erreur si l'API échoue
+        return <div>{error}</div>; 
     }
 
     return (
@@ -39,7 +39,7 @@ const CourseList = () => {
             <h2>All Courses</h2>
             <div className="course-list">
                 {courses.map((course) => (
-                    <div className="course-card" key={course._id}>  {/* Remplacez _id par l'ID réel si nécessaire */}
+                    <div className="course-card" key={course._id}>  
                         <div className="course-image">
                             <img src={`http://localhost:5000${course.image}`} alt={course.title} />
                         </div>

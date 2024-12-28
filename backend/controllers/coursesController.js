@@ -36,7 +36,7 @@ const getCourseById = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
-// Update a course
+
 const updateCourse = async (req, res) => {
     try {
         const { id } = req.params;
@@ -54,7 +54,7 @@ const updateCourse = async (req, res) => {
     }
 };
 
-// Delete a course
+
 const deleteCourse = async (req, res) => {
     try {
         const { id } = req.params;

@@ -17,7 +17,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { PhotoCamera } from '@mui/icons-material';
 
 const EditCourse = () => {
-    const { id } = useParams(); // ID du cours à modifier
+    const { id } = useParams(); 
     const navigate = useNavigate();
 
     const [title, setTitle] = useState('');

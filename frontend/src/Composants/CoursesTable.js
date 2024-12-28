@@ -22,7 +22,6 @@ const CoursesTable = () => {
     const [courses, setCourses] = useState([]);
     const navigate = useNavigate();
 
-    // Charger les cours
     useEffect(() => {
         const fetchCourses = async () => {
             try {
@@ -35,7 +34,7 @@ const CoursesTable = () => {
         fetchCourses();
     }, []);
 
-    // Supprimer un cours
+
     const handleDelete = async (id) => {
         try {
             await axios.delete(`http://localhost:5000/Course/deleteCourse/${id}`);
@@ -45,14 +44,13 @@ const CoursesTable = () => {
         }
     };
 
-    // Redirection vers le formulaire de création
     const handleCreateCourse = () => {
         navigate('/create-course');
     };
 
     return (
         <Box sx={{ p: 4, backgroundColor: '#f9fafc', minHeight: '100vh' }}>
-            {/* Header */}
+           
             <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ mb: 4 }}>
                 <Typography variant="h4" component="div">
                     Courses Management
@@ -67,7 +65,6 @@ const CoursesTable = () => {
                 </Button>
             </Stack>
 
-            {/* Table */}
             <TableContainer component={Paper}>
                 <Table>
                     <TableHead sx={{ backgroundColor: '#f5f5f5' }}>

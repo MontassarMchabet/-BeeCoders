@@ -1,4 +1,4 @@
-/* General Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@
     padding: 0 20px;
   }
   
-  /* Header */
+
   .header {
     padding: 15px 0;
     background: white;
@@ -27,8 +27,7 @@
     font-weight: 600;
     color: #333;
   }
-  
-  /* Hero Section */
+
   .hero {
     height: 500px;
     /* background-image: url('/placeholder.svg?height=500&width=1200'); */
